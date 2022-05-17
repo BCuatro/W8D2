@@ -1,6 +1,5 @@
 Array.prototype.uniq =function() {
     const newArr =[];
-    debugger
     
     this.forEach(el => {
         if (!newArr.includes(el)) {
@@ -10,4 +9,14 @@ Array.prototype.uniq =function() {
     
     return newArr;
 }
-console.log([1,2,1].uniq())
+
+Array.prototype.two_sum =function() {
+    const newArr= [];
+    this.forEach(el => {
+        if (this.includes(el* -1)) {
+            newArr.push([this.indexOf(el),this.indexOf(el* -1)]);
+            
+        }
+    });
+    return newArr
+}
