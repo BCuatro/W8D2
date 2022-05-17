@@ -1,8 +1,16 @@
 Array.prototype.myEach = function (callback) {
-    let i = 0;
-    while (i < this.length) {
-        callback(this[i])
-        i++;
+   
+    for (let i = 0; i < this.length; i++) {
+        callback(this[i]);
     }
 
+}
+
+
+Array.prototype.myMap = function(callback){
+   let mapped =[];
+   this.myEach(ele => {
+    mapped.push(cb(ele))
+
+   }); 
 }
