@@ -20,3 +20,22 @@ Array.prototype.two_sum =function() {
     });
     return newArr
 }
+
+Array.prototype.myReduce = function (callback, acc) {
+    let i;
+
+    if (acc === undefined) {
+        acc = this[0];
+        i = 1
+    } 
+    else {
+        i = 0
+    }
+    
+    this.slice(i, this.length).myEach(function (ele) {
+        
+        acc = callback(acc, ele)
+    });
+
+    return acc;
+}
